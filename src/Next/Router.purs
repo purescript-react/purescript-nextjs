@@ -18,6 +18,8 @@ foreign import query :: forall q. Router -> q
 
 foreign import push :: Router -> String -> Effect Unit
 
+foreign import route :: Router -> String
+
 foreign import _on :: forall a. String -> a -> Effect Unit
 
 foreign import _off :: forall a. String -> a -> Effect Unit

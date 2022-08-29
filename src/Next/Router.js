@@ -20,3 +20,5 @@ export function _off(event) {
 export const query = (router) => router.query
 
 export const push = (router) => (route) => () => router.push(route)
+
+export const route = (router) => router.route
