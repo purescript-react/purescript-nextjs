@@ -12,10 +12,12 @@ to generate this file without the comments in this block.
 -}
 { name = "my-project"
 , dependencies =
-  [ "aff-promise"
+  [ "aff"
+  , "aff-promise"
   , "console"
   , "effect"
   , "functions"
+  , "maybe"
   , "nullable"
   , "prelude"
   , "react-basic"
