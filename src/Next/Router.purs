@@ -1,7 +1,14 @@
 module Next.Router where
 
 import Prelude
+
+import Control.Promise (Promise)
+import Control.Promise as Promise
+import Data.Maybe (Maybe)
+import Data.Nullable (Nullable)
+import Data.Nullable as Nullable
 import Effect (Effect)
+import Effect.Aff (Aff)
 import Effect.Uncurried (mkEffectFn1)
 import React.Basic.Hooks (Hook, unsafeHook)
 
@@ -17,6 +24,13 @@ foreign import data UseRouter :: Type -> Type
 foreign import query :: forall q. Router -> q
 
 foreign import push :: Router -> String -> Effect Unit
+
+type RoutingOptions = { shallow :: Boolean }
+
+foreign import replaceImpl :: Router -> String -> Nullable String -> Nullable RoutingOptions -> Effect (Promise Boolean)
+
+replace :: Router -> String -> Maybe String -> Maybe RoutingOptions -> Aff Boolean
+replace router url asUrl options = replaceImpl router url (Nullable.toNullable asUrl) (Nullable.toNullable options) # Promise.toAffE
 
 foreign import route :: Router -> String
 
