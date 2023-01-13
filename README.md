@@ -15,6 +15,7 @@ Here is an example how to use the router.
 ```purescript
 import React.Basic.DOM.Simplified.Generated as R
 import React.Basic.Hooks as React
+import Next.Router as NextRouter
 
 ...
 
@@ -27,3 +28,7 @@ React.component "MyComponent" \props -> React.do
         dispatchRoute = Router.push Router
     pure $ R.button { onClick: handler_ $ dispatchRoute "/about" } "Click me"
 ```
+
+## Credits
+
+This lib has been heavily inspired by and initially extracted from [`next-purescript-example`](https://github.com/jonasbuntinx/next-purescript-example), which is licensed under [MIT](https://github.com/jonasbuntinx/next-purescript-example/blob/master/LICENSE).
