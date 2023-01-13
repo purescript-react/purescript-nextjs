@@ -10,7 +10,7 @@ Once you have set up a Next.js project, you can use the FFI bindings here. This 
 
 
 ### Router
-Here is an example to use the router.
+Here is an example how to use the router.
 
 ```purescript
 import React.Basic.DOM.Simplified.Generated as R
