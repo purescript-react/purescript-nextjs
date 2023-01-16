@@ -13,11 +13,13 @@ module Next.Router
   , pushAs
   , pushAs_
   , push_
+  , query
   , replace
   , routeChangeComplete
   , routeChangeError
   , useRouter
-  ) where
+  )
+  where
 
 import Prelude
 
@@ -55,6 +57,9 @@ foreign import data NextRouter ∷ Type
 
 foreign import useRouterImpl ∷ Effect NextRouter
 foreign import queryImpl ∷ NextRouter → Foreign
+
+query ∷ NextRouter → Foreign
+query = queryImpl
 
 foreign import data UseRouter ∷ Type → Type
 
