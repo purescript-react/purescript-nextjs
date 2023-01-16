@@ -31,7 +31,6 @@ export const pushImpl = (path) => (as) => (options) => (routerInstance) => () =>
 
 export function pushImplNoAs(path) {
   return (options) => (routerInstance) => () => {
-    console.log("pushImplNoAs", options);
     routerInstance.push(path, undefined, options);
   };
 }
