@@ -11,21 +11,6 @@ import React.Basic.Hooks (Hook, ReactComponent, unsafeHook)
 
 type SWR d err = { "data" :: d, error :: err }
 
--- const fetcher = (...args) => fetch(...args).then((res) => res.json())
-
--- function Profile() {
---   const { data, error } = useSWR('/api/profile-data', fetcher)
-
---   if (error) return <div>Failed to load</div>
---   if (!data) return <div>Loading...</div>
-
---   return (
---     <div>
---       <h1>{data.name}</h1>
---       <p>{data.bio}</p>
---     </div>
---   )
-
 foreign import useSWR_
   :: forall d err
    . EffectFn2
