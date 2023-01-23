@@ -1,4 +1,4 @@
-import nextRouter, { useRouter } from "next/router.js";
+import nextRouter, { useRouter } from "next/navigation";
 
 export const onImpl = function (event) {
   return function (cb) {
