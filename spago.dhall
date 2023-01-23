@@ -26,5 +26,5 @@
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
 , license = "MIT"
-, repository = "https://github.com/rowtype-yoga/purescript-nextjs-template.git"
+, repository = "https://github.com/rowtype-yoga/purescript-nextjs.git"
 }
