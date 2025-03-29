@@ -1,1 +1,1 @@
-export { default as _link} from "next/link"
+export { default as _link } from "next/link"

@@ -1,10 +1,6 @@
 module NextUI.SWR where
 
-import Prelude
-
 import Control.Promise (Promise)
-import Data.Function.Uncurried (Fn2)
-import Data.Nullable (Nullable)
 import Effect (Effect)
 import Effect.Uncurried (EffectFn1, EffectFn2, mkEffectFn1, runEffectFn2)
 import React.Basic.Hooks (Hook, ReactComponent, unsafeHook)
