@@ -5,28 +5,75 @@
         "path": "./",
         "core": {
           "dependencies": [
-            "aff",
-            "aff-promise",
-            "console",
-            "datetime",
-            "effect",
-            "either",
-            "foldable-traversable",
-            "foreign",
-            "foreign-object",
-            "functions",
-            "identity",
-            "maybe",
-            "nullable",
-            "options",
-            "partial",
-            "prelude",
-            "react-basic",
-            "react-basic-hooks",
-            "transformers",
-            "typelevel-prelude",
-            "unsafe-coerce",
-            "yoga-json"
+            {
+              "aff": ">=8.0.0 <9.0.0"
+            },
+            {
+              "aff-promise": ">=4.0.0 <5.0.0"
+            },
+            {
+              "console": ">=6.1.0 <7.0.0"
+            },
+            {
+              "datetime": ">=6.1.0 <7.0.0"
+            },
+            {
+              "effect": ">=4.0.0 <5.0.0"
+            },
+            {
+              "either": ">=6.1.0 <7.0.0"
+            },
+            {
+              "foldable-traversable": ">=6.0.0 <7.0.0"
+            },
+            {
+              "foreign": ">=7.0.0 <8.0.0"
+            },
+            {
+              "foreign-object": ">=4.1.0 <5.0.0"
+            },
+            {
+              "functions": ">=6.0.0 <7.0.0"
+            },
+            {
+              "identity": ">=6.0.0 <7.0.0"
+            },
+            {
+              "maybe": ">=6.0.0 <7.0.0"
+            },
+            {
+              "nullable": ">=6.0.0 <7.0.0"
+            },
+            {
+              "options": ">=7.0.0 <8.0.0"
+            },
+            {
+              "partial": ">=4.0.0 <5.0.0"
+            },
+            {
+              "prelude": ">=6.0.2 <7.0.0"
+            },
+            {
+              "react-basic": ">=17.0.0 <18.0.0"
+            },
+            {
+              "react-basic-dom": ">=8.2.0 <9.0.0"
+            },
+            {
+              "react-basic-hooks": ">=8.2.0 <9.0.0"
+            },
+            {
+              "transformers": ">=6.1.0 <7.0.0"
+            },
+            {
+              "typelevel-prelude": ">=7.0.0 <8.0.0"
+            },
+            {
+              "unsafe-coerce": ">=6.0.0 <7.0.0"
+            },
+            {
+              "yoga-json": ">=5.1.0 <6.0.0"
+            }
           ],
           "build_plan": [
             "aff",
@@ -75,6 +122,7 @@
             "prelude",
             "profunctor",
             "react-basic",
+            "react-basic-dom",
             "react-basic-hooks",
             "record",
             "refs",
@@ -100,8 +148,15 @@
           ]
         },
         "test": {
-          "dependencies": [],
-          "build_plan": []
+          "dependencies": [
+            "console",
+            "effect"
+          ],
+          "build_plan": [
+            "console",
+            "effect",
+            "prelude"
+          ]
         }
       }
     },
@@ -1219,6 +1274,27 @@
         "effect",
         "prelude",
         "record"
+      ]
+    },
+    "react-basic-dom": {
+      "type": "registry",
+      "version": "7.0.0",
+      "integrity": "sha256-a9M8K2iVA3AAhJQGj36bapcdmGJk9ichLghK4/ZFkB0=",
+      "dependencies": [
+        "arrays",
+        "effect",
+        "foldable-traversable",
+        "foreign-object",
+        "maybe",
+        "nullable",
+        "prelude",
+        "react-basic",
+        "record",
+        "unsafe-coerce",
+        "web-dom",
+        "web-events",
+        "web-file",
+        "web-html"
       ]
     },
     "react-basic-hooks": {

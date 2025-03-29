@@ -1,3 +1,1 @@
-import image from "next/image.js"
-
-export const imageImpl = image;
+export { default as imageImpl } from "next/image.js"

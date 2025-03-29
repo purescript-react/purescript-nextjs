@@ -1,41 +1,23 @@
-import nextRouter, { useRouter } from "next/navigation";
+import nextRouter from "next/navigation";
 
-export const onImpl = function (event) {
-  return function (cb) {
-    return function () {
-      nextRouter.events.on(event, cb);
-    };
-  };
-};
+export { useRouter as useRouterImpl } from "next/navigation";
 
-export const offImpl = function (event) {
-  return function (cb) {
-    return function () {
-      nextRouter.events.off(event, cb);
-    };
-  };
-};
+export const onImpl = nextRouter.events.on
+export const offImpl = nextRouter.events.off
 
-export const useRouterImpl = () => useRouter();
+export const query = (nr) => nr.query;
+export const pathnameImpl = (nr) => nr.pathname
+export const asPathImpl = (nr) => nr.asPath
 
-export const queryImpl = (nr) => nr.query;
-
-export function pathnameImpl(nr) {
-  return () => nr.pathname;
-}
-
-export const asPathImpl = (nr) => nr.asPath;
-
-export const pushImpl = (path) => (as) => (options) => (routerInstance) => () =>
+export function pushImpl(path, as, options, routerInstance) {
   routerInstance.push(path, as, options);
+};
 
-export function pushImplNoAs(path) {
-  return (options) => (routerInstance) => () => {
-    routerInstance.push(path, undefined, options);
-  };
+export function pushImplNoAs(path, options, routerInstance) {
+  routerInstance.push(path, undefined, options);
 }
 
-export const historyPushState = (href) => (as) => () => {
+export function historyPushStateImpl(href, as) {
   window.history.pushState(
     _objectSpread(
       _objectSpread({}, window.history.state),
@@ -43,10 +25,10 @@ export const historyPushState = (href) => (as) => () => {
       {
         as: as,
         url: href,
-      }
+      },
     ),
     "",
-    href
+    href,
   );
 };
 
@@ -79,7 +61,7 @@ function _objectSpread(target) {
         Object.defineProperty(
           target,
           key,
-          Object.getOwnPropertyDescriptor(source, key)
+          Object.getOwnPropertyDescriptor(source, key),
         );
       });
     }
@@ -101,12 +83,12 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 
-export const mkOnRouteChangeStartHandler = (fn) => () => (url, opts) =>
-  fn(url)(opts)();
-export const addOnRouteChangeStartHandler = (handler) => (router) => () => {
+
+export function addOnRouteChangeStartHandler(handler, router) {
   router.events.on("routeChangeStart", handler);
   return () => router.events.off("routeChangeStart", handler);
 };
 
-export const replaceImpl = (router) => (route) => (as) => (options) => () =>
+export function replaceImpl(router, route, as, options) {
   router.replace(route, as, options);
+};
