@@ -1,0 +1,33 @@
+package:
+  name: nextjs
+  publish:
+    version: 0.1.2
+    license: MIT
+    location:
+      githubOwner: purescript-react
+      githubRepo: purescript-nextjs
+  dependencies:
+    - aff: ">=7.1.0 <9.0.0"
+    - aff-promise: ">=4.0.0 <5.0.0"
+    - datetime: ">=6.1.0 <7.0.0"
+    - effect: ">=4.0.0 <5.0.0"
+    - either: ">=6.1.0 <7.0.0"
+    - foldable-traversable: ">=6.0.0 <7.0.0"
+    - foreign: ">=7.0.0 <8.0.0"
+    - foreign-object: ">=4.1.0 <5.0.0"
+    - functions: ">=6.0.0 <7.0.0"
+    - maybe: ">=6.0.0 <7.0.0"
+    - nullable: ">=6.0.0 <7.0.0"
+    - options: ">=7.0.0 <8.0.0"
+    - partial: ">=4.0.0 <5.0.0"
+    - prelude: ">=6.0.1 <7.0.0"
+    - react-basic: ">=17.0.0 <18.0.0"
+    - react-basic-hooks: ">=8.1.2 <9.0.0"
+    - transformers: ">=6.0.0 <7.0.0"
+    - unsafe-coerce: ">=6.0.0 <7.0.0"
+    - yoga-json: ">=4.0.1 <6.0.0"
+  test:
+    main: Test.Main
+    dependencies:
+      - console: ">=6.0.0 <7.0.0"
+workspace: {}
