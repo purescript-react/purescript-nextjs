@@ -16,7 +16,6 @@ package:
     - foreign: ">=7.0.0 <8.0.0"
     - foreign-object: ">=4.1.0 <5.0.0"
     - functions: ">=6.0.0 <7.0.0"
-    - identity: ">=6.0.0 <7.0.0"
     - maybe: ">=6.0.0 <7.0.0"
     - nullable: ">=6.0.0 <7.0.0"
     - options: ">=7.0.0 <8.0.0"
@@ -25,7 +24,6 @@ package:
     - react-basic: ">=17.0.0 <18.0.0"
     - react-basic-hooks: ">=8.1.2 <9.0.0"
     - transformers: ">=6.0.0 <7.0.0"
-    - typelevel-prelude: ">=7.0.0 <8.0.0"
     - unsafe-coerce: ">=6.0.0 <7.0.0"
     - yoga-json: ">=4.0.1 <6.0.0"
   test:
